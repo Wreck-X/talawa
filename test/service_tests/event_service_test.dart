@@ -3,6 +3,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:mockito/mockito.dart';
+import 'package:talawa/models/events/event_model.dart';
 import 'package:talawa/services/database_mutation_functions.dart';
 import 'package:talawa/services/event_service.dart';
 import 'package:talawa/utils/event_queries.dart';
@@ -18,6 +19,11 @@ void main() {
     registerServices();
   });
   group('Test EventService', () {
+    test('Test eventStream getter', ( ) {
+      EventService eventServiceInstance = EventService();
+      final eventStream = eventServiceInstance.eventStream;
+      expect(eventStream, isA<Stream<Event>>()); 
+    })
     test('Test editEvent method', () async {
       final dataBaseMutationFunctions = locator<DataBaseMutationFunctions>();
       final query = TaskQueries.eventTasks('eventId');
