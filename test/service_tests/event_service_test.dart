@@ -1,7 +1,6 @@
 // ignore_for_file: talawa_api_doc
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:googleapis/mybusinesslodging/v1.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:mockito/mockito.dart';
 import 'package:talawa/models/events/event_model.dart';
