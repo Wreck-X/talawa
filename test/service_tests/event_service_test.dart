@@ -19,11 +19,11 @@ void main() {
     registerServices();
   });
   group('Test EventService', () {
-    test('Test eventStream getter', ( ) {
+    test('Test eventStream getter', () {
       EventService eventServiceInstance = EventService();
       final eventStream = eventServiceInstance.eventStream;
-      expect(eventStream, isA<Stream<Event>>()); 
-    })
+      expect(eventStream, isA<Stream<Event>>());
+    });
     test('Test editEvent method', () async {
       final dataBaseMutationFunctions = locator<DataBaseMutationFunctions>();
       final query = TaskQueries.eventTasks('eventId');
