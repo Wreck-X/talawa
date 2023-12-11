@@ -20,7 +20,7 @@ void main() {
   });
   group('Test EventService', () {
     test('Test eventStream getter', () {
-      EventService eventServiceInstance = EventService();
+      final eventServiceInstance = EventService();
       final eventStream = eventServiceInstance.eventStream;
       expect(eventStream, isA<Stream<Event>>());
     });
